@@ -30,6 +30,11 @@ p{
 
 img{
     margin: 10px;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    display: block;
+    padding: 5px 0;
 }
 #left{
  
