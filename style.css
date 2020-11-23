@@ -1,98 +1,61 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body{
-    color: whitesmoke;
-    text-align: center;
-    justify-content: center;
-    background-color: rgb(31, 8, 8);
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Challenge</title>
+    <link rel="stylesheet" href="style.css">
 
-h1{
-    font-family: 'Modak', cursive;
-    font-family: 'Nerko One', cursive;
-    color: salmon;
-    font-size: 70px;
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Nerko+One&display=swap" rel="stylesheet">
 
-p{
-    font-family: 'Modak', cursive;
-    color: salmon;
-    font-size: 30px;
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
 
-.container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    max-width:100%;
-}
+</head>
 
-img{
-    margin: 10px;
-    height: auto;
-    max-width: 100%;
-    border: none;
-    display: block;
-    padding: 5px;
-}
-#left{
- 
-    float: left;
-}
-#right{
-    float: right;
-}
+<body>
+    <div class="main">
 
-a{
-    text-decoration: none;
-}
+        <div id="animated-example" class="animated flash">
 
-#btn-1{
-        box-shadow: 0px 0px 0px 2px #9fb4f2;
-        background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-        background-color:#7892c2;
-        border-radius:10px;
-        border:1px solid #4e6096;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:19px;
-        padding:12px 37px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #283966;
-    }
-    #btn-1:hover {
-        background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-        background-color:#476e9e;
-    }
-    
-    #refresh{
-    box-shadow:inset 0px 1px 0px 0px #bee2f9;
-	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
-	background-color:#63b8ee;
-	border-radius:6px;
-	border:1px solid #3866a3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:16px 30px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #7cacde;
-    }
+            <h1><span class="blinking"></span></h1>
+        </div>
 
-    #refresh:hover{
-    background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
-    background-color:#468ccf;
-    }
 
-    #refresh:active{
-    position:relative;
-	top:1px;
-    }
+        <div class="container">
+            <div id="left" class="">
+                <p>YOU</p>
+                <img id="image" src="images/dice6.png" alt="">
+            </div>
 
+            <div id="right" class="">
+                <p>COMPUTER</p>
+                <img id="image" src="images/dice6.png" alt="">
+            </div>
+        </div>
+        <button id="btn-1">Play</button>
+        <a href="index.html"> <button type="button" id="refresh">Restart</button></a>
+
+        <button id="btn-2">Instructions</button>
+
+    </div>
+
+    <div class="pop-up">
+        <div class="pop">
+            <ol>
+                <p> Directions for play:</p>
+                <li>Click the <b>PLAY</b> button to roll the dice and keep the highest.</li>
+                <li>If <b>YOU</b> have the highest value then <b>YOU WIN</b> else the <b>COMPUTER WINS</b>.</li>
+                <li>It's a <b>DRAW</b> when the dice value matches.</li>
+                <li>Click <b>Restart</b> button to reset the game.</li>
+            </ol>
+            <span class="X" draggable="true">&times;</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="instruction.js"></script>
+</body>
+
+</html>
