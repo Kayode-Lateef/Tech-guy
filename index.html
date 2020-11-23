@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,54 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Modak&family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Nerko+One&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <div class="main">
 
+        <div id="animated-example" class="animated flash">
 
-        <h1><span></span></h1>
+            <h1><span class="blinking"></span></h1>
+        </div>
+
 
         <div class="container">
-            <div id="left" class="">   
-                <p>YOU</p> 
-                <img id="image" src="images/dice6.png" alt="">  
-             </div>
-     
-             <div id="right" class="">    
-                 <p>COMPUTER</p>  
-                 <img id="image" src="images/dice6.png" alt="">    
-             </div>
+            <div id="left" class="">
+                <p>YOU</p>
+                <img id="image" src="images/dice6.png" alt="">
+            </div>
+
+            <div id="right" class="">
+                <p>COMPUTER</p>
+                <img id="image" src="images/dice6.png" alt="">
+            </div>
         </div>
-        <button id="btn-1">Play</button> 
-        <br>
-        <br>
-        <button id="refresh"> <a href="index.html">Refresh</a> </button>
+        <button id="btn-1">Play</button>
+        <a href="index.html"> <button type="button" id="refresh">Restart</button></a>
+
+        <button id="btn-2">Instructions</button>
 
     </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
+
+    <div class="pop-up">
+        <div class="pop">
+            <ol>
+                <p> Directions for play:</p>
+                <li>Click the <b>PLAY</b> button to roll the dice and keep the highest.</li>
+                <li>If <b>YOU</b> have the highest value then <b>YOU WIN</b> else the <b>COMPUTER WINS</b>.</li>
+                <li>It's a <b>DRAW</b> when the dice value matches.</li>
+                <li>Click <b>Restart</b> button to reset the game.</li>
+            </ol>
+            <span class="X" draggable="true">&times;</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="instruction.js"></script>
+</body>
+
+</html>
