@@ -16,7 +16,7 @@ const randomImageSource2 = "images/" + randomDiceImage2;
 
 function decide(){
     if (randomCount1 > randomCount2) {
-          span.innerHTML = "YOU WINS!";   
+          span.innerHTML = "YOU WIN!";   
     } else if (randomCount2 > randomCount1) {
         span.innerHTML = "COMPUTER WINS!";   
     } else {
